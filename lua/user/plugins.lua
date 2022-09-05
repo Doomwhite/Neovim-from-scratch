@@ -43,14 +43,25 @@ return packer.startup(function(use)
   -- My plugins here
   
 
+  -- Dependencies
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use "tpope/vim-repeat"
+  use "kyazdani42/nvim-web-devicons"
+
+  -- Movement
+  use "ggandor/lightspeed.nvim"
+  use 'kyazdani42/nvim-tree.lua'
+  use "nvim-telescope/telescope.nvim"
+  use "startup-nvim/startup.nvim"
+  
 
   -- Colorschemes
   use "lunarvim/colorschemes"
   use "lunarvim/onedarker.nvim"
   use "folke/tokyonight.nvim"  
+
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
@@ -61,6 +72,7 @@ return packer.startup(function(use)
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use  -- Automatically set up your configuration after cloning packer.nvim
+
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
     require("packer").sync()
