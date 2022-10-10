@@ -55,6 +55,7 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope.nvim"
   use "startup-nvim/startup.nvim"
   use "beauwilliams/focus.nvim"
+  use 'ThePrimeagen/harpoon'
 
   -- Colorschemes
   use "lunarvim/colorschemes"
